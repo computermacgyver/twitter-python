@@ -25,11 +25,13 @@ To collect data you need a Twitter account and a Twitter application. Assuming y
 1. Download the code in the repository if you haven't already
 2. Open the auth_example.py file in a text editor (gedit, kate, notepad, textmate, etc.)
 3. Update the following lines with the information displayed in the web browser for your application: 
+```python
    consumer_key="..."
    consumer_secret="..."
    access_token="..." 
    access_token_secret="...."
    #Replace the … with whatever values are shown in your web browser. Be sure to keep the quotation marks.
+```
 4. Save the file as auth.py (not the same name as before)
 
 You are now ready to run a simple example.
@@ -51,7 +53,9 @@ The following steps assume you've run either streaming_simple.py or streaming.py
 
 1. Open the terminal/console and go to the folder with the files
 2. Run the following (assuming output.json is name of the file with tweets)
+```
    python json2tsv.py output.json
+```
 3. This will produce output.tsv which can be opened in OpenOffice Calc, Excel, etc. If prompted select that columns (fields) are separated with a tab character.
 
 ##Production (streaming.py)
@@ -63,6 +67,7 @@ streaming.py is a more production ready file. It does not print tweets as they a
 4. Open streaming.py and set the name of the directory you created
 5. Copy streaming.py, the output directory (outputDir), tweepy, and anything else to a server that is always on and connected
 6. Start collecting tweets with
+```
     nohub python streaming.py
-    
+```    
 
