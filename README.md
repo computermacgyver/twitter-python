@@ -23,14 +23,14 @@ To collect data you need a Twitter account and a Twitter application. Assuming y
 
 ##Connect your Twitter application to these scripts
 1. Download the code in the repository if you haven't already
-2. Open the auth.py file in a text editor (gedit, kate, notepad, textmate, etc.)
+2. Open the auth_example.py file in a text editor (gedit, kate, notepad, textmate, etc.)
 3. Update the following lines with the information displayed in the web browser for your application: 
    consumer_key="..."
    consumer_secret="..."
    access_token="..." 
    access_token_secret="...."
    #Replace the … with whatever values are shown in your web browser. Be sure to keep the quotation marks.
-4. Save the file
+4. Save the file as auth.py (not the same name as before)
 
 You are now ready to run a simple example.
 
