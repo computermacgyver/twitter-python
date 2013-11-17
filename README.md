@@ -44,7 +44,7 @@ If you do not see tweets appearing, check that you have [Tweepy](http://www.gith
 
 In addition to printing out the text of tweets, streaming_simple.py also saves the results to output.json
 
-##Convert json to csv
+##Convert json to csv (json2tsv.py) -- Coming soon
 Twitter supplies tweets in JSON format. See the [Twitter documentation](https://dev.twitter.com/docs/platform-objects/tweets) for what fields are available. To create a spreadsheet of collected tweets, we can select certain fields and include these. This is what the json2csv.py file does.
 
 The following steps assume you've run either streaming_simple.py or streaming.py and have file(s) of tweets with one tweet per line.
@@ -54,7 +54,7 @@ The following steps assume you've run either streaming_simple.py or streaming.py
    python json2tsv.py output.json
 3. This will produce output.tsv which can be opened in OpenOffice Calc, Excel, etc. If prompted select that columns (fields) are separated with a tab character.
 
-##Production
+##Production (streaming.py)
 streaming.py is a more production ready file. It does not print tweets as they are recieved, but simply stores them to a files with the name of the day they are recieved on. It starts a new file at midnight every day. It also has additional error checking / recovery code.
 
 1. Create a directory (folder) to store the tweets in
