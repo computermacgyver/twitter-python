@@ -73,3 +73,14 @@ streaming.py is a more production ready file. It does not print tweets as they a
     nohub python streaming.py
 ```    
 
+##Reference
+If you use this code in support of an academic publication, please cite:
+   
+    Hale, S. A. (2014) Global Connectivity and Multilinguals in the Twitter Network. 
+    In Proceedings of the 2014 ACM Annual Conference on Human Factors in Computing Systems, 
+    ACM (Montreal, Canada).
+
+  
+This code is released under the [GPLv2 license](http://www.gnu.org/licenses/gpl-2.0.html). Please [contact me](http://www.scotthale.net/blog/?page_id=9) if you wish to use the code in ways that the GPLv2 license does not permit.
+
+More details, related code, and the original academic paper using this code is available at http://www.scotthale.net/pubs/?chi2014 .
