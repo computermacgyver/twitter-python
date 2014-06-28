@@ -48,17 +48,17 @@ If you do not see tweets appearing, check that you have [Tweepy](http://www.gith
 
 In addition to printing out the text of tweets, streaming_simple.py also saves the results to output.json
 
-##Convert json to csv (json2tsv.py) -- Coming soon
-Twitter supplies tweets in JSON format. See the [Twitter documentation](https://dev.twitter.com/docs/platform-objects/tweets) for what fields are available. To create a spreadsheet of collected tweets, we can select certain fields and include these. This is what the json2csv.py file does.
+##Convert json to spreadsheet (data2spreadsheet.py)
+Twitter supplies tweets in JSON format. See the [Twitter documentation](https://dev.twitter.com/docs/platform-objects/tweets) for what fields are available. To create a spreadsheet of collected tweets, we can select certain fields and include these. This is what the data2spreadsheet.py file does. Note that this file does not include every possible field in a tweet. You may wish to modify the file if you need to include a particular field that is not currently included.
 
 The following steps assume you've run either streaming_simple.py or streaming.py and have file(s) of tweets with one tweet per line.
 
 1. Open the terminal/console and go to the folder with the files
 2. Run the following (assuming output.json is name of the file with tweets)
 ```
-   python json2tsv.py output.json
+   python data2spreadsheet.py output.json
 ```
-3. This will produce output.tsv which can be opened in OpenOffice Calc, Excel, etc. If prompted select that columns (fields) are separated with a tab character.
+3. This will produce ``output/output_1234.tsv``,  where 1234 is the unix timestamp when the file was created (this is the number of seconds since January 1, 1970). The file can be opened in LibreOffice Calc, Excel, etc. If prompted select that columns (fields) are separated with a tab character.
 
 ##Production (streaming.py)
 streaming.py is a more production ready file. It does not print tweets as they are recieved, but simply stores them to a files with the name of the day they are recieved on. It starts a new file at midnight every day. It also has additional error checking / recovery code.
