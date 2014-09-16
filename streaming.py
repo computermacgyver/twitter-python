@@ -33,8 +33,6 @@ class FileDumperListener(StreamListener):
 	def on_data(self, data):
 		self.fh.write(data)
 		self.tweetCount+=1
-		j=json.loads(data)
-		print(j["text"])
 		
 		#Status method prints out vitals every five minutes and also rotates the log if needed
 		self.status()
