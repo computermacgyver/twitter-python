@@ -8,18 +8,15 @@ To collect data you need a Twitter account and a Twitter application. Assuming y
 
 ##Twitter application
 
-1. Open a web browser and go to http://dev.twitter.com/
-2. Click “Sign in” in the top right corner and sign in with your normal Twitter username and password
-3. Hover on your username in the top-right corner and click "My Applications"
-4. Click the "Create a new application" button
-5. Read and accept the terms and conditions – note principally that you agree not to distribute any of the raw tweet data and to delete tweets from your collection if they should be deleted from Twitter in the future.
-6. Enter a name, description, and temporary website (e.g. http://coming-soon.com)
-7. Read and accept the developer rules of the road, enter the CAPTCHA
-8. Click "Create your Twitter application"
-9. Scroll to the bottom of the page and click "Create my access token"
-10. Wait a minute or two and press your browser's refresh button (or ctrl+r / cmd+r)
-11. You should now see new fields labeled "Access token" and "Access token secret" at the bottom of the page.
-12. You now have a Twitter application that can act on behalf of your Twitter user to read data from Twitter.
+1. Open a web browser and go to https://apps.twitter.com/app/new
+2. Sign in with your normal Twitter username and password if you are not already signed in.
+3. Enter a name, description, and temporary website (e.g. http://coming-soon.com)
+4. Read and accept the terms and conditions – note principally that you agree not to distribute any of the raw tweet data and to delete tweets from your collection if they should be deleted from Twitter in the future.
+5. Click "Create your Twitter application"
+6. Click on the "API Keys" tab and then click "Create my access token"
+7. Wait a minute or two and press your browser's refresh button (or ctrl+r / cmd+r)
+8. You should now see new fields labeled "Access token" and "Access token secret" at the bottom of the page.
+9. You now have a Twitter application that can act on behalf of your Twitter user to read data from Twitter.
 
 ##Connect your Twitter application to these scripts
 1. Download the code in the repository if you haven't already
@@ -27,8 +24,8 @@ To collect data you need a Twitter account and a Twitter application. Assuming y
 3. Update the following lines with the information displayed in the web browser for your application: 
 
 ```python
-    consumer_key="..."
-    consumer_secret="..."
+    consumer_key="..." #Note this is now called API key	
+    consumer_secret="..." #Note this is now called API secret
     access_token="..." 
     access_token_secret="...."
     #Replace the … with whatever values are shown in your web browser. Be sure to keep the quotation marks.
