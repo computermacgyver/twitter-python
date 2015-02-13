@@ -67,7 +67,7 @@ streaming.py is a more production ready file. It does not print tweets as they a
 5. Copy streaming.py, the output directory (outputDir), tweepy, and anything else to a server that is always on and connected
 6. Start collecting tweets with
 ```
-    nohub python streaming.py
+    nohup python streaming.py >> logfile 2>> errorfile
 ```    
 
 ##Reference
