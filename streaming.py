@@ -5,6 +5,14 @@ from datetime import datetime
 import os
 import json
 from auth import TwitterAuth
+import time
+import sys
+
+try:
+	import smtplib
+	from email.mime.text import MIMEText
+except:
+	sys.stderr.write("Error loading smtplib. Will not be able to send emails...\n")
 
 # Output directory to hold json files (one per day) with tweets
 # Within the output directory, the script loads a file named FILTER with the terms to be tracked (one per line)
@@ -120,3 +128,19 @@ if __name__ == '__main__':
 			except:
 				pass
 			continue
+		except Exception as e:
+			#Anything else
+			try:
+				info = str(e)
+				sys.stderr.write("%s - Unexpected exception. %s\n"%(datetime.now(),info))
+				msg = MIMEText("Unexpected error in Twitter collector. Check server. %s"%info);
+				msg['Subject'] = "Unexpected error in Twitter collector"
+				msg['From'] = "youremail@example.com"
+				msg['To'] = email
+				s = smtplib.SMTP("smtp.example.com") #Update this to your SMTP server
+				s.sendmail("youremail@example.com", email, msg.as_string())
+				s.quit()
+			except:
+				pass
+			time.sleep(1800)#Sleep thirty minutes and resume
+			
